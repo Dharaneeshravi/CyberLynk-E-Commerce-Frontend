@@ -4405,3 +4405,640 @@ img {
   max-width: calc(100% - 24px);
   box-sizing: border-box;
 }
+
+/* =====================================================
+   FINAL CONSOLIDATED RESPONSIVE OVERRIDES
+   Mehrae Couture | Navbar logo + responsive refinements
+   Keep this block at the end of App.css.
+===================================================== */
+
+:root {
+  --mc-ink: #050b16;
+  --mc-panel: #0c111c;
+  --mc-gold: #c9a76c;
+  --mc-gold-light: #e1c28b;
+  --mc-ivory: #f7f4ee;
+  --mc-text: #e5eaf3;
+  --mc-muted: #8794a9;
+  --mc-border: #293343;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html,
+body,
+#root {
+  width: 100%;
+  min-height: 100%;
+  max-width: 100%;
+}
+
+body {
+  margin: 0;
+  overflow-x: hidden;
+}
+
+img {
+  max-width: 100%;
+}
+
+/* NAVBAR */
+.navbar {
+  position: relative;
+  z-index: 1050;
+  width: 100%;
+  padding: 12px 0;
+  background: var(--mc-ivory) !important;
+  color: var(--mc-ink) !important;
+  border-bottom: 1px solid rgba(201, 167, 108, 0.35);
+}
+
+.navbar .container,
+.navbar .container-fluid {
+  min-width: 0;
+}
+
+.navbar .navbar-brand,
+.navbar .nav-link,
+.navbar .dropdown-toggle {
+  color: var(--mc-ink) !important;
+}
+
+.navbar .nav-link {
+  font-size: 13px;
+  font-weight: 500;
+  transition: color .25s ease;
+}
+
+.navbar .nav-link:hover,
+.navbar .nav-link:focus,
+.navbar .navbar-brand:hover,
+.navbar .dropdown-toggle:hover {
+  color: #a98247 !important;
+}
+
+.couture-logo {
+  display: inline-flex;
+  align-items: center;
+  flex: 0 0 auto;
+  padding: 0;
+}
+
+.navbar-logo-image {
+  display: block;
+  width: 170px;
+  height: 62px;
+  max-width: 100%;
+  object-fit: contain;
+  object-position: left center;
+  transition: transform .25s ease;
+}
+
+.navbar-logo-image:hover {
+  transform: scale(1.025);
+}
+
+.navbar .navbar-toggler {
+  border: 1px solid var(--mc-gold);
+  box-shadow: none;
+}
+
+.navbar .navbar-toggler:focus {
+  box-shadow: 0 0 0 3px rgba(201, 167, 108, .18);
+}
+
+.navbar .dropdown-menu {
+  min-width: 210px;
+  padding: 8px 0;
+  background: #fff;
+  border: 1px solid rgba(201, 167, 108, .35);
+  border-radius: 4px;
+  box-shadow: 0 12px 28px rgba(5, 11, 22, .12);
+}
+
+.navbar .dropdown-item {
+  padding: 10px 17px;
+  color: var(--mc-ink);
+  font-size: 13px;
+  transition: background .2s ease, color .2s ease, padding .2s ease;
+}
+
+.navbar .dropdown-item:hover,
+.navbar .dropdown-item:focus {
+  padding-left: 22px;
+  color: #8f6b37;
+  background: #f7f4ee;
+}
+
+.navbar-actions {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 14px;
+  min-width: 0;
+}
+
+.navbar-search {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  min-width: 0;
+}
+
+.navbar-search .form-control {
+  width: 165px;
+  min-width: 0;
+  height: 38px;
+  padding: 7px 11px;
+  color: var(--mc-ink) !important;
+  background: #fff !important;
+  border: 1px solid #d5d1c8;
+  border-radius: 3px;
+  font-size: 13px;
+  box-shadow: none;
+}
+
+.navbar-search .form-control::placeholder {
+  color: #777;
+}
+
+.navbar-search .form-control:focus {
+  border-color: var(--mc-gold);
+  box-shadow: 0 0 0 2px rgba(201, 167, 108, .12);
+}
+
+.search-btn {
+  height: 38px;
+  padding: 0 13px;
+  color: #8f6b37;
+  background: transparent;
+  border: 1px solid var(--mc-gold);
+  border-radius: 3px;
+  transition: .25s ease;
+}
+
+.search-btn:hover {
+  color: var(--mc-ink);
+  background: var(--mc-gold);
+}
+
+.cart-icon {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  color: var(--mc-ink) !important;
+  font-size: 23px;
+  text-decoration: none;
+  transition: color .25s ease;
+}
+
+.cart-icon:hover {
+  color: #a98247 !important;
+}
+
+.cart-count {
+  position: absolute;
+  top: -8px;
+  right: -10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 18px;
+  height: 18px;
+  color: var(--mc-ink);
+  background: var(--mc-gold);
+  border-radius: 50%;
+  font-size: 10px;
+  font-weight: 700;
+}
+
+.login-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 7px;
+  padding: 10px 15px;
+  color: var(--mc-ink) !important;
+  background: var(--mc-gold);
+  border: 1px solid var(--mc-gold);
+  border-radius: 4px;
+  font-size: 12px;
+  font-weight: 600;
+  text-decoration: none;
+  white-space: nowrap;
+  transition: .25s ease;
+}
+
+.login-btn:hover {
+  color: #8f6b37 !important;
+  background: transparent;
+}
+
+/* HOME CATEGORY CARD CONTRAST */
+.category-card {
+  position: relative;
+  isolation: isolate;
+  overflow: hidden;
+}
+
+.category-card img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.category-card::after {
+  position: absolute;
+  z-index: 1;
+  inset: 0;
+  background: linear-gradient(90deg, rgba(5, 11, 22, .62), rgba(5, 11, 22, .06));
+  content: "";
+  pointer-events: none;
+}
+
+.category-content {
+  z-index: 2;
+}
+
+.category-content h3,
+.category-content p {
+  color: #fff;
+  text-shadow: 0 1px 8px rgba(0, 0, 0, .55);
+}
+
+.category-btn {
+  position: relative;
+  z-index: 3;
+  text-decoration: none;
+}
+
+/* PRODUCT CARD AND IMAGE CONSISTENCY */
+.products-grid,
+.dress-product-grid,
+.related-products-grid {
+  width: 100%;
+  min-width: 0;
+}
+
+.product-card,
+.dress-product-card,
+.related-product-card {
+  min-width: 0;
+}
+
+.product-image,
+.dress-product-image-wrapper,
+.product-main-image {
+  position: relative;
+  overflow: hidden;
+}
+
+.product-image img,
+.dress-product-image,
+.product-main-image img,
+.related-product-card img {
+  display: block;
+  width: 100%;
+  object-fit: cover;
+}
+
+.dress-product-details,
+.product-info,
+.related-product-info {
+  min-width: 0;
+}
+
+.dress-product-details h3,
+.product-info h4,
+.related-product-info h4 {
+  overflow-wrap: anywhere;
+}
+
+.dress-product-description {
+  min-height: 0;
+}
+
+.dress-product-price {
+  flex-wrap: wrap;
+}
+
+.dress-shop-toolbar > * {
+  min-width: 0;
+}
+
+.dress-sort {
+  max-width: 100%;
+}
+
+/* ABOUT AND FOOTER WIDTH SAFETY */
+.about-section {
+  overflow: hidden;
+}
+
+.about-container,
+.about-content,
+.about-image,
+.footer-brand,
+.footer-links,
+.footer-main,
+.footer-contact,
+.footer-bottom {
+  min-width: 0;
+}
+
+.about-image img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.couture-footer,
+.footer-newsletter,
+.footer-contact,
+.footer-bottom {
+  width: 100%;
+}
+
+.newsletter-form,
+.newsletter-form input {
+  min-width: 0;
+}
+
+/* AUTH FORMS */
+.auth-page,
+.auth-container,
+.auth-form-section,
+.auth-form-wrapper {
+  min-width: 0;
+}
+
+.auth-input-box input {
+  color-scheme: dark;
+}
+
+/* TABLET */
+@media (max-width: 1199px) {
+  .navbar-logo-image {
+    width: 150px;
+    height: 58px;
+  }
+
+  .navbar-actions {
+    gap: 10px;
+  }
+
+  .navbar-search .form-control {
+    width: 140px;
+  }
+}
+
+@media (max-width: 991px) {
+  .navbar {
+    padding: 9px 0;
+  }
+
+  .navbar .navbar-collapse {
+    padding: 15px 0 8px;
+  }
+
+  .navbar .navbar-nav {
+    align-items: flex-start;
+    gap: 0;
+  }
+
+  .navbar .nav-link {
+    padding: 10px 4px;
+  }
+
+  .navbar-actions {
+    width: 100%;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+    margin-top: 12px;
+  }
+
+  .service-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .category-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .products-grid,
+  .dress-product-grid {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+
+  .footer-main {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+/* MOBILE */
+@media (max-width: 768px) {
+  .navbar-actions {
+    width: 100%;
+  }
+
+  .about-container {
+    flex-direction: column;
+  }
+
+  .about-content,
+  .about-image {
+    width: 100%;
+  }
+
+  .dress-shop-section {
+    padding: 50px 5%;
+  }
+
+  .dress-shop-toolbar {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .dress-filter-price,
+  .dress-sort {
+    width: 100%;
+  }
+
+  .dress-product-grid,
+  .products-grid,
+  .related-products-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 14px;
+  }
+
+  .dress-product-image-wrapper {
+    height: 270px;
+  }
+
+  .dress-product-details {
+    padding: 14px;
+  }
+
+  .footer-main {
+    gap: 28px 18px;
+  }
+
+  .view-product-btn,
+  .view-product,
+  .product-view-btn {
+    opacity: 1;
+    visibility: visible;
+    position: static;
+    transform: none;
+    margin-top: 10px;
+  }
+}
+
+@media (max-width: 576px) {
+  .navbar-logo-image {
+    width: 125px;
+    height: 48px;
+  }
+
+  .navbar-actions {
+    gap: 12px;
+  }
+
+  .navbar-search {
+    width: 100%;
+  }
+
+  .navbar-search .form-control {
+    flex: 1;
+    width: auto;
+  }
+
+  .category-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .category-card {
+    height: 230px;
+  }
+
+  .category-content {
+    left: 18px;
+    width: 70%;
+  }
+
+  .category-content h3 {
+    font-size: 24px;
+  }
+
+  .products-grid,
+  .dress-product-grid,
+  .related-products-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 11px;
+  }
+
+  .product-image {
+    height: 220px;
+  }
+
+  .dress-product-image-wrapper {
+    height: 235px;
+  }
+
+  .dress-product-details {
+    padding: 11px;
+  }
+
+  .dress-product-details h3 {
+    font-size: 14px;
+  }
+
+  .dress-product-description {
+    font-size: 12px;
+  }
+
+  .dress-current-price {
+    font-size: 16px;
+  }
+
+  .dress-size-buttons {
+    gap: 5px;
+  }
+
+  .dress-size-buttons button {
+    width: 32px;
+    height: 32px;
+  }
+
+  .footer-main {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .newsletter-content {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .newsletter-form {
+    width: 100%;
+  }
+
+  .footer-contact {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .footer-bottom {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .product-details-page {
+    padding: 20px 15px 40px;
+  }
+
+  .product-details-container {
+    grid-template-columns: 1fr;
+    gap: 28px;
+  }
+
+  .product-detail-info h1 {
+    font-size: 25px;
+  }
+
+  .product-detail-price {
+    font-size: 24px;
+  }
+}
+
+@media (max-width: 360px) {
+  .navbar-logo-image {
+    width: 108px;
+  }
+
+  .login-btn {
+    padding: 8px 10px;
+    font-size: 11px;
+  }
+
+  .search-btn {
+    padding: 0 9px;
+  }
+
+  .products-grid,
+  .dress-product-grid,
+  .related-products-grid {
+    gap: 8px;
+  }
+
+  .product-image,
+  .dress-product-image-wrapper {
+    height: 205px;
+  }
+}

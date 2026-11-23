@@ -2,8 +2,11 @@ import "../App.css";
 import { Link, useNavigate } from "react-router-dom";
 import { useEffect, useState } from "react";
 
+import logo from "../assets/IMG-20261118-WA0002.jpg";
+
 function Navbar() {
   const navigate = useNavigate();
+
   const [cartCount, setCartCount] = useState(0);
   const [searchTerm, setSearchTerm] = useState("");
 
@@ -58,8 +61,7 @@ function Navbar() {
       <div className="container-fluid px-4">
         {/* BRAND LOGO */}
         <Link className="navbar-brand couture-logo" to="/">
-          MEHRAE
-          <span>COUTURE</span>
+          <img src={logo} alt="Mehrae Couture" className="navbar-logo-image" />
         </Link>
 
         {/* MOBILE TOGGLE */}
